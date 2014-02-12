@@ -46,7 +46,7 @@ restart|force-reload|reload)
 	$0 start
 ;;
 status)
-    status_of_proc "$DAEMON" "$NAME" && exit 0 || exit $?
+	status_of_proc "$DAEMON" "$NAME" && exit 0 || exit $?
 ;;
 *)
 	echo "Usage: $0 {start|stop|restart|reload}"

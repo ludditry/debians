@@ -1,10 +1,10 @@
-#!/bin/sh
+#!/bin/sh                                                                                                                                 
 
 set -e
 
 case "$1" in
     purge)
-        # Remove swift user if possible
+        # Remove swift user if possible                                                                                                    
         userdel swift || true
     ;;
     remove|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
@@ -15,7 +15,6 @@ case "$1" in
     ;;
 esac
 
-#DEBHELPER#
+#DEBHELPER#                                                                                                                                
 
 exit 0
-

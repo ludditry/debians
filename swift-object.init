@@ -26,12 +26,13 @@ start)
 ;;
 stop)
 	log_daemon_msg "Stopping Swift ${PRINT_NAME}" "swift-init ${SERVICE_NAME}"
-	/usr/bin/swift-init ${SERVICE_NAME} shutdown
+	/usr/bin/swift-init ${SERVICE_NAME} stop
 	log_end_msg $?
 ;;
 restart|force-reload|reload)
-	log_daemon_msg "Restarting Swift ${PRINT_NAME}" "swift-init ${SERVICE_NAME}"
-	/usr/bin/swift-init ${SERVICE_NAME} reload
+	$0 stop
+	sleep 1
+	$0 start
 ;;
 status)
 	exec /usr/bin/swift-init ${SERVICE_NAME} status
