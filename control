@@ -1,0 +1,41 @@
+Source: python-swiftclient
+Section: python
+Priority: extra
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Adam Gandelman <adamg@canonical.com>
+Build-Depends: debhelper (>= 8.0.0),
+ python-all (>= 2.6.6-3~),
+ python-coverage,
+ python-d2to1,
+ python-eventlet,
+ python-fixtures,
+ python-httplib2,
+ python-keystoneclient,
+ python-mock,
+ python-nose,
+ python-pbr,
+ python-prettytable,
+ python-setuptools,
+ python-simplejson,
+ python-testtools,
+ python-subunit,
+ testrepository
+Standards-Version: 3.9.4
+X-Python-Version: >= 2.7
+Vcs-Browser: http://bazaar.launchpad.net/~ubuntu-server-dev/python-swiftclient/havana/files
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-server-dev/python-swiftclient/havana
+XS-Testsuite: autopkgtest
+
+Package: python-swiftclient
+Architecture: all
+Depends: python-eventlet,
+ python-httplib2,
+ python-keystoneclient,
+ python-setuptools,
+ ${misc:Depends},
+ ${python:Depends}
+Breaks: swift ( << 1.7.4-0ubuntu2)
+Replaces: swift ( << 1.7.4-0ubuntu2)
+Description: Client library for Openstack Swift API.
+ This is a client for the OpenStack Swift API. There's a Python API
+ (the ``swiftclient`` module), and a command-line script (``swift``).

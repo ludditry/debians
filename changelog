@@ -1,0 +1,87 @@
+python-swiftclient (1:1.6.0-0ubuntu1~cloud0) precise-havana; urgency=low
+
+  * New upstream release for the Ubuntu Cloud Archive.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Tue, 10 Sep 2013 09:31:24 -0400
+
+python-swiftclient (1:1.6.0-0ubuntu1) saucy; urgency=low
+
+  [ James Page ]
+  * d/control: Update VCS fields for new branch locations.
+
+  [ Chuck Short ]
+  * New upstream release.
+  * debian/control: Add python-mock as a dependency.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 06 Sep 2013 13:29:42 -0400
+
+python-swiftclient (1:1.4.0-0ubuntu1) saucy; urgency=low
+
+  [ James Page ]
+  * d/control: Fix typo in package description. 
+
+  [ Chuck Short ]
+  * New upstream release.
+  * debian/control:
+    - Drop dependency of python-argparse
+    - Add dependency of python-d2to1 and python-pbr
+    - Add python-subunit, python-coverage, python-testtools, 
+      and testrepository.
+  * debian/rules: Run testr by hand since we dont want to 
+    run pep8 tests.
+
+  [ Yolanda Robla ]
+  * debian/tests: added autopkg tests
+
+ -- Chuck Short <zulcss@ubuntu.com>  Thu, 04 Jul 2013 08:04:45 -0500
+
+python-swiftclient (1:1.3.0-0ubuntu1) raring; urgency=low
+
+  * New changelog.
+  * debian/control: Breaks and Replaces if swift is installed. (LP: #1062160)
+  * debian/control: Add python-testtools and python-fixtures as a build depends.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Wed, 13 Feb 2013 08:52:28 -0600
+
+python-swiftclient (1:1.2.0-0ubuntu2) quantal; urgency=low
+
+  [ Adam Gandelman ]
+  * debian/control: Drop dependency on ${python:Provides}, add
+    python-setuptools.
+
+  [ Soren Hansen ]
+  * Update debian/watch to account for symbolically named tarballs and
+    use newer URL.
+  * Fix Launchpad URLs in debian/watch.
+
+ -- Adam Gandelman <adamg@canonical.com>  Wed, 19 Sep 2012 14:16:32 -0700
+
+python-swiftclient (1:1.2.0-0ubuntu1) quantal; urgency=low
+
+  [ Adam Gandleman ]
+  * debian/control, pydist-overrides: Add python-keystoneclient.
+
+  [ Chuck Short ]
+  * New upstram version.
+  * debian/pydist-overrides: Drop python-keystoneclient.
+  * debian/control: Add X-Python version and ${python:Provides}
+  * New upstream version
+  * debian/watch: Add pypi sources
+
+ -- Chuck Short <zulcss@ubuntu.com>  Tue, 18 Sep 2012 19:04:28 -0500
+
+python-swiftclient (1:1.1.1-0ubuntu1) quantal; urgency=low
+
+  [ Adam Gandelman ]
+  * Initial release.
+
+  [ Chuck Short ]
+  * debian/watch: Added
+  * debian/rules: Download tarball from regular places.
+  * Update changelog
+  * debian/control: Add python-eventlet as a build depends.
+  * debian/rules: Enabled changelog.
+  * debian/copyright: Update format.
+
+ -- Adam Gandelman <adamg@canonical.com>  Wed, 06 Jun 2012 12:54:56 -0700
+

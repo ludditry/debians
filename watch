@@ -1,0 +1,4 @@
+version=3
+opts="uversionmangle=s/%7E/~/" https://launchpad.net/python-swiftclient/+download https://launchpad.net/python-swiftclient/.*/.*/.*/python-swiftclient-(.*)\.tar\.gz
+http://tarballs.openstack.org/python-swiftclient/ python-swiftclient-(\d.*).tar.gz
+http://pypi.python.org/packages/source/p/python-swiftclient/python-swiftclient-(.*).tar.gz
